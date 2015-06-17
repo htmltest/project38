@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Nissan</title>
+
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/device.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/tools.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+
+            <header>
+                <div class="logo"><img src="images/logo.png" alt="" /></div>
+                <div class="title">Ваш личный водительский профиль <div class="title-sub">Конвертируйте данные профиля в уникальное предложение от Nissan</div></div>
+            </header>
+
+            <!-- profile -->
+            <div class="profile">
+
+                <!-- profile item -->
+                <div class="profile-item">
+                    <div class="profile-item-border"></div>
+                    <div class="profile-chart-border"><div class="profile-chart-border-inner"></div></div>
+                    <div class="profile-item-photo" style="background-image:url(images/profil-1.jpg)"></div>
+                    <div class="profile-chart" data-value="20"></div>
+                    <div class="profile-item-text">
+                        <div class="profile-item-text-value">Вы на <span>20</span> <small>%</small></div>
+                        <div class="profile-item-text-name">покоритель бездорожья</div>
+                    </div>
+                </div>
+                <!-- profile item END -->
+
+                <!-- profile item -->
+                <div class="profile-item">
+                    <div class="profile-item-border"></div>
+                    <div class="profile-chart-border"><div class="profile-chart-border-inner"></div></div>
+                    <div class="profile-item-photo" style="background-image:url(images/profil-2.jpg)"></div>
+                    <div class="profile-chart" data-value="40"></div>
+                    <div class="profile-item-text">
+                        <div class="profile-item-text-value">Вы на <span>40</span> <small>%</small></div>
+                        <div class="profile-item-text-name">покоритель бездорожья</div>
+                    </div>
+                </div>
+                <!-- profile item END -->
+
+                <!-- profile item -->
+                <div class="profile-item">
+                    <div class="profile-item-border"></div>
+                    <div class="profile-chart-border"><div class="profile-chart-border-inner"></div></div>
+                    <div class="profile-item-photo" style="background-image:url(images/profil-3.jpg)"></div>
+                    <div class="profile-chart" data-value="60"></div>
+                    <div class="profile-item-text">
+                        <div class="profile-item-text-value">Вы на <span>60</span> <small>%</small></div>
+                        <div class="profile-item-text-name">покоритель бездорожья</div>
+                    </div>
+                </div>
+                <!-- profile item END -->
+
+                <!-- profile item -->
+                <div class="profile-item">
+                    <div class="profile-item-border"></div>
+                    <div class="profile-chart-border"><div class="profile-chart-border-inner"></div></div>
+                    <div class="profile-item-photo" style="background-image:url(images/profil-4.jpg)"></div>
+                    <div class="profile-chart" data-value="80"></div>
+                    <div class="profile-item-text">
+                        <div class="profile-item-text-value">Вы на <span>80</span> <small>%</small></div>
+                        <div class="profile-item-text-name">покоритель бездорожья</div>
+                    </div>
+                </div>
+                <!-- profile item END -->
+
+                <a href="city-tiida.html" class="profile-next">Мы знаем,<br />что Вам подходит</a>
+
+                <script src="https://www.google.com/jsapi"></script>
+                <script>
+                    google.load('visualization', '1', {packages:['corechart']});
+                    google.setOnLoadCallback(function() {
+                        drawChart();
+
+                        jQuery(window).resize(function() {
+                            jQuery('.profile-chart').each(function() {
+                                var chart = new google.visualization.PieChart(this);
+                                chart.clearChart();
+
+                                $(this).parent().find('.profile-chart-border-inner').each(function() {
+                                    var chart = new google.visualization.PieChart(this);
+                                    chart.clearChart();
+                                });
+                            });
+                            drawChart();
+                        });
+                    });
+
+                    function drawChart() {
+                        var options = {
+                            chartArea: {left: 0, top: 0, width: '100%', height: '100%'},
+                            backgroundColor: 'transparent',
+                            enableInteractivity: false,
+                            pieSliceBorderColor: 'transparent',
+                            legend: 'none',
+                            pieSliceText: 'none',
+                            pieStartAngle: 0,
+                            tooltip: { trigger: 'none' },
+                            slices: {
+                                0: { color: '#0056aa' },
+                                1: { color: 'transparent' }
+                            }
+                        };
+
+                        var optionsBorder = {
+                            chartArea: {left: 0, top: 0, width: '100%', height: '100%'},
+                            backgroundColor: 'transparent',
+                            enableInteractivity: false,
+                            pieSliceBorderColor: 'transparent',
+                            legend: 'none',
+                            pieSliceText: 'none',
+                            pieStartAngle: 0,
+                            tooltip: { trigger: 'none' },
+                            slices: {
+                                0: { color: '#c30c29' },
+                                1: { color: 'transparent' }
+                            }
+                        };
+
+                        jQuery('.profile-chart').each(function() {
+                            var curChart = $(this);
+                            var data = google.visualization.arrayToDataTable([
+                                ['', ''],
+                                ['', Number(curChart.data('value'))],
+                                ['', 100 - Number(curChart.data('value'))]
+                            ]);
+                            var chart = new google.visualization.PieChart(this);
+                            chart.draw(data, options);
+
+                            curChart.parent().find('.profile-chart-border-inner').each(function() {
+                                var data = google.visualization.arrayToDataTable([
+                                    ['', ''],
+                                    ['', Number(curChart.data('value'))],
+                                    ['', 100 - Number(curChart.data('value'))]
+                                ]);
+                                var chart = new google.visualization.PieChart(this);
+                                chart.draw(data, optionsBorder);
+                            });
+                        });
+
+                    }
+                </script>
+
+            </div>
+            <!-- profile END -->
+
+            <div class="translate">*Инновации, которые восхищают.</div>
+
+        </div>
+        <!-- wrapper END -->
+
+    </body>
+</html>
