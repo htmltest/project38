@@ -22,11 +22,14 @@
         $('.form form').submit(function(e) {
             var fieldsValid = true;
             $('.form-block').each(function() {
+                $(this).removeClass('error');
                 if ($(this).find('.form-radio input').length > 0 && $(this).find('.form-radio input:checked').length == 0) {
                     fieldsValid = false;
+                    $(this).addClass('error');
                 }
                 if ($(this).find('input[name="phone"]').length > 0 && $(this).find('input[name="phone"]').val() == '') {
                     fieldsValid = false;
+                    $(this).addClass('error');
                 }
             });
             if (!fieldsValid) {

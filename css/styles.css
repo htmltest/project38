@@ -67,6 +67,8 @@ header {display:table; width:100%; position:relative; z-index:2}
 .form-phone-submit {display:inline-block; vertical-align:top; padding:0 0 0 16px}
 .form-phone-submit input {vertical-align:top; width:35px; height:35px; border:none; background:url(../images/sprite.png) -217px -55px; margin:0; padding:0; outline:none; text-align:center; font:9px/35px "NissanAG Light Ext", sans-serif; color:#fff; cursor:pointer; -webkit-appearance:none}
 
+.form-2 .form-row .form-block.error {background:#fff5f5}
+
 @media (max-width:1000px) {
     .form {padding:0; margin:0 -35px; position:relative}
     .form-2 {padding:0 0 21px 0; margin:0}
@@ -158,7 +160,7 @@ header {display:table; width:100%; position:relative; z-index:2}
 
 .auto-descr {float:left; width:250px; margin:0 0 0 -250px; position:relative}
 
-.auto-text {font:10px/12px "NissanAG Light", sans-serif; color:#000}
+.auto-text {font:11px/13px "NissanAG Light", sans-serif; color:#000}
 .auto-text ul {margin:0; padding:0; list-style:none}
 .auto-text ul li {margin:0; padding:0 0 5px 0; position:relative}
 .auto-text ul li:before {content:""; display:block; width:8px; height:8px; background:#c30c29; border-radius:4px; position:absolute; left:-17px; top:2px}
@@ -189,7 +191,7 @@ header {display:table; width:100%; position:relative; z-index:2}
 
     .auto-descr {float:none; width:auto; margin:0}
 
-    .auto-text {font-size:14px; line-height:17px; padding:10px 0 0 17px}
+    .auto-text {font-size:15px; line-height:17px; padding:10px 0 0 17px}
     .auto-text ul li:before {top:4px}
 
     .auto-colors {float:right; text-align:center; padding:54px 0 0 0}
