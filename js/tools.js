@@ -20,7 +20,7 @@
 
         $('input[name="phone"]').val('').mask('+7 (999) 999-99-99', {completed: function(){ $('.form-phone-submit input').addClass('active'); }});
         $('input[name="phone"]').change(function() {
-            if ($(this).val('')) {
+            if ($(this).val() == '') {
                 $('.form-phone-submit input').removeClass('active');
             }
         });
