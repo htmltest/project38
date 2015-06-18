@@ -18,7 +18,12 @@
             $(this).find('input').prop('checked', true).trigger('change');
         });
 
-        $('input[name="phone"]').mask('+7 (999) 999-99-99');
+        $('input[name="phone"]').val('').mask('+7 (999) 999-99-99', {completed: function(){ $('.form-phone-submit input').addClass('active'); }});
+        $('input[name="phone"]').change(function() {
+            if ($(this).val('')) {
+                $('.form-phone-submit input').removeClass('active');
+            }
+        });
         $('.form form').submit(function(e) {
             var fieldsValid = true;
             $('.form-block').each(function() {
@@ -26,10 +31,12 @@
                 if ($(this).find('.form-radio input').length > 0 && $(this).find('.form-radio input:checked').length == 0) {
                     fieldsValid = false;
                     $(this).addClass('error');
+                    $('.form-hint').show();
                 }
                 if ($(this).find('input[name="phone"]').length > 0 && $(this).find('input[name="phone"]').val() == '') {
                     fieldsValid = false;
                     $(this).addClass('error');
+                    $('.form-hint').show();
                 }
             });
             if (!fieldsValid) {
