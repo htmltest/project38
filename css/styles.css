@@ -131,7 +131,7 @@ header {display:table; width:100%; position:relative; z-index:2}
     .profile-item-text-value {font-size:21px; line-height:63px}
     .profile-item-text-value span {font-size:63px}
     .profile-item-text-value small {font-size:32px}
-    .profile-item-text-name {height:28px; font-size:12px; line-height:28px; margin:-14px 0 0 0}
+    .profile-item-text-name {height:28px; font-size:12px; line-height:28px; margin:-14px 0 0 0; background:#4c4c4c}
     .profile-next {position:relative; left:auto; top:auto; margin:2px auto 46px auto; padding:8px 14px 0 0; width:222px; height:44px; font-size:16px; line-height:17px; background-position:left -176px}
 }
 
