@@ -5,10 +5,12 @@
         <title>Nissan</title>
 
         <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
 
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/device.min.js"></script>
         <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,6 +24,15 @@
             <header>
                 <div class="logo"><img src="images/logo.png" alt="" /></div>
                 <div class="title">Вам больше всего подойдет</div>
+                <div class="steps">
+                    <div class="steps-desktop steps-desktop-3">
+                        <div class="steps-desktop-step-1">1</div>
+                        <div class="steps-desktop-step-2">2</div>
+                        <div class="steps-desktop-step-3">3</div>
+                        <div class="steps-desktop-step-4">4</div>
+                    </div>
+                    <div class="steps-mobile"><span>3</span>/4</div>
+                </div>
             </header>
 
             <!-- auto -->
@@ -80,13 +91,28 @@
                             <span style="background:#ffffff; border:1px solid #cfd0d0"></span>
                         </div>
                     </div>
-                    <div class="auto-next-title">Определите самые выгодные для себя условия на эту модель</div>
-                    <a href="#" class="auto-next">Персональные условия</a>
-                    <div class="auto-next-title-mobile">Определите самые выгодные для себя условия на эту модель</div>
                 </div>
                 <!-- auto descr END -->
             </div>
             <!-- auto END -->
+
+            <!-- special -->
+            <div class="special">
+                <div class="special-text">
+                    <div class="special-text-container">
+                        <div class="special-text-inner">
+                            <p>На данную модель для Вас доступны следующие условия:</p>
+                            <ul>
+                                <li>скидка до <strong>240 000</strong> рублей при использовании программы утилизации или «трейд-ин»;</li>
+                                <li><strong>1 год дополнительной гарантии</strong> по программе NISSAN SERVICE 3+;</li>
+                                <li>помощь на дорогах 24/7 на весь срок владения.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="special-link"><a href="anketa-2.html" class="auto-next">Принять предложение</a></div>
+            </div>
+            <!-- special END -->
 
             <!-- auto list -->
             <div class="auto-list">
@@ -175,6 +201,8 @@
                         </a>
                     </div>
                 </div>
+                <a href="#" class="auto-list-prev"></a>
+                <a href="#" class="auto-list-next"></a>
             </div>
             <!-- auto list END -->
 

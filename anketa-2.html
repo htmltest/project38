@@ -5,10 +5,12 @@
         <title>Nissan</title>
 
         <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
 
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/device.min.js"></script>
         <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
         <script src="js/tools.js"></script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,48 +23,67 @@
 
             <header>
                 <div class="logo"><img src="images/logo.png" alt="" /></div>
-                <div class="title">Ваши условия</div>
+                <div class="title">Заявка на получение специального предложения</div>
+                <div class="steps">
+                    <div class="steps-desktop steps-desktop-4">
+                        <div class="steps-desktop-step-1">1</div>
+                        <div class="steps-desktop-step-2">2</div>
+                        <div class="steps-desktop-step-3">3</div>
+                        <div class="steps-desktop-step-4">4</div>
+                    </div>
+                    <div class="steps-mobile"><span>4</span>/4</div>
+                </div>
             </header>
 
-            <!-- form -->
-            <div class="form form-2">
+            <!-- special form -->
+            <div class="special-form">
+                <div class="special-form-title">Для получения специальных условий, пожалуйста, заполните информацию в полях ниже.<br />Вы можете оставить только номер телефона, если не готовы сразу выбрать конкретного дилера, и мы обязательно свяжемся с Вами.</div>
                 <form action="anketa-last.html" method="post">
-                    <div class="form-row">
-                        <div class="form-block">
-                            <div class="form-block-title">Владеете ли Вы сейчас автомобилем Nissan?</div>
-                            <div class="form-radio"><div><span><input type="radio" name="present" value="1" /></span>Да</div></div>
-                            <div class="form-radio"><div><span><input type="radio" name="present" value="2" /></span>Владел раньше</div></div>
-                        </div>
-                        <div class="form-block">
-                            <div class="form-block-title">Хотели бы Вы приобрести новый автомобиль?</div>
-                            <div class="form-radio"><div><span><input type="radio" name="new" value="1" /></span>Да</div></div>
-                            <div class="form-radio"><div><span><input type="radio" name="new" value="2" /></span>Нет</div></div>
-                        </div>
-                        <div class="form-block">
-                            <div class="form-block-title">Расставаясь с автомобилем, Вы&nbsp;предпочтете:</div>
-                            <div class="form-radio"><div><span><input type="radio" name="sale" value="1" /></span>Сдать автомобиль в «трейд-ин», сэкономив время и силы</div></div>
-                            <div class="form-radio"><div><span><input type="radio" name="sale" value="2" /></span>Продать автомобиль самостоятельно</div></div>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-block">
-                            <div class="form-block-title">Вы готовы оплатить полную стоимость автомобиля, или Вас интересуют выгодные условия?</div>
-                            <div class="form-radio"><div><span><input type="radio" name="buy" value="1" /></span>Полная стоимость</div></div>
-                            <div class="form-radio"><div><span><input type="radio" name="buy" value="2" /></span>Кредит</div></div>
-                            <div class="form-radio"><div><span><input type="radio" name="buy" value="3" /></span>Рассрочка</div></div>
-                        </div>
-                        <div class="form-block form-block-phone">
-                            <div class="form-block-phone-title">Пожалуйста, оставьте контактный телефон, по которому наш специалист сможет связаться с Вами.</div>
-                            <div class="form-phone-content">
-                                <div class="form-phone-input"><input type="text" name="phone" value="" placeholder="+7 (___) ___-__-__" /></div>
-                                <div class="form-phone-submit"><input type="submit" value="ОК" /></div>
+
+                    <div class="special-form-block">
+                        <div class="special-form-block-inner">
+                            <div class="special-form-label">Укажите город:</div>
+                            <div class="special-form-field">
+                                <div class="special-form-select">
+                                    <select name="city" id="city" data-placeholder="-">
+                                        <option value="">-</option>
+                                        <option value="1">Москва</option>
+                                        <option value="2">Санкт-Петербург</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="form-hint">Необходимо ответить на все вопросы анкеты</div>
                         </div>
                     </div>
+
+                    <div class="special-form-block">
+                        <div class="special-form-block-inner">
+                            <div class="special-form-label">Выберите дилера:</div>
+                            <div class="special-form-field">
+                                <div class="special-form-select">
+                                    <select name="dealer" id="dealer" data-placeholder="-">
+                                        <option value="">-</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="special-form-block">
+                        <div class="special-form-block-inner">
+                            <div class="special-form-label special-form-label-phone">Укажите Ваш контактный телефон для связи:</div>
+                            <div class="special-form-field">
+                                <div class="special-form-input"><input type="text" name="phone" value="" placeholder="+7 (___) ___-__-__" /></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="special-form-hint">Необходимо заполнить все поля</div>
+
+                    <div class="special-form-submit"><input type="submit" value="Отправить данные" /></div>
+
                 </form>
             </div>
-            <!-- form END -->
+            <!-- special form END -->
 
             <div class="translate">*Инновации, которые восхищают.<br />Предоставляя номер своего телефона ООО «Ниссан Мэнуфэкчуринг Рус» (далее — «Общество»), Вы подтверждаете свое безусловное согласие на обработку вышеуказанных персональных данных с использованием и без использования средств автоматизации, включая их передачу компаниям группы Nissan, авторизованным дилерам (Nissan, Infiniti, Datsun), а также организациям, с которыми Общество осуществляет взаимодействие на основании соответствующих договоров (соглашений), для следующих целей: 1) хранение в информационных системах для оптимизации процессов взаимодействия; 2) статистические и аналитические цели, в том числе установление степени удовлетворенности оказанными услугами; 3) проведение маркетинговых исследований. Настоящее согласие действует в течение 25 лет со дня его подтверждения. Вы уведомлены о том, что в соответствии со статьей 9 Федерального закона от 27.07.2006 №152-ФЗ «О персональных данных» настоящее согласие может быть отозвано либо путем направления в письменной форме уведомления Обществу заказным почтовым отправлением с описью вложения по адресу 194362, г. Санкт-Петербург, пос. Парголово, Комендантский проспект, д. 140, либо вручения лично под подпись уполномоченным представителям Общества. Настоящим Вы подтверждаете, что согласны получать информацию о товарах, услугах и мероприятиях с помощью средств связи (интернета, СМС-сообщений, телефонных звонков, почты). ®2015 Nissan</div>
 

@@ -33,70 +33,67 @@ header {display:table; width:100%; position:relative; z-index:2}
 .logo {display:table-cell; vertical-align:top; line-height:0}
 .title {display:table-cell; width:100%; vertical-align:middle; color:#c30c29; font:20px/24px "NissanAG Medium Ext", sans-serif; padding:0 0 0 30px}
 .title-sub {font:16px/19px "NissanAG Light Ext", sans-serif; margin:6px 0 -25px 0; color:#000}
+.steps {display:table-cell; vertical-align:middle}
+.steps-desktop {width:191px; height:17px; background:url(../images/sprite.png); font:9px/17px "NissanAG Medium Ext", sans-serif; text-align:center; color:#000}
+.steps-desktop div {float:left; width:47px}
+.steps-desktop-1 {background-position:left -275px}
+.steps-desktop-1 .steps-desktop-step-1 {color:#fff}
+.steps-desktop-2 {background-position:left -292px}
+.steps-desktop-2 .steps-desktop-step-1,
+.steps-desktop-2 .steps-desktop-step-2 {color:#fff}
+.steps-desktop-3 {background-position:left -309px}
+.steps-desktop-3 .steps-desktop-step-1,
+.steps-desktop-3 .steps-desktop-step-2,
+.steps-desktop-3 .steps-desktop-step-3 {color:#fff}
+.steps-desktop-4 {background-position:left -326px}
+.steps-desktop-4 .steps-desktop-step-1,
+.steps-desktop-4 .steps-desktop-step-2,
+.steps-desktop-4 .steps-desktop-step-3,
+.steps-desktop-4 .steps-desktop-step-4 {color:#fff}
+.steps-mobile {display:none; white-space:nowrap; font:18px/20px "NissanAG Medium Ext", sans-serif; color:#b3b3b3}
+.steps-mobile span {color:#c30c29}
 
 @media (max-width:768px) {
     .title {font-size:18px; line-height:22px}
     .title-sub {font-size:14px; line-height:17px; margin:6px 0 -40px 0}
+    .steps-desktop {display:none}
+    .steps-mobile {display:table-cell}
 }
 
-.form {padding:30px 60px 0 60px}
-.form-2 {padding-top:45px; padding-bottom:21px}
-.form-2:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.form form {margin:0; padding:0; width:100%; display:table; border-collapse:separate; border-spacing:35px}
-.form-row {display:table-row}
-.form-2 form {display:block}
-.form-2 .form-row {float:left; width:50%; box-sizing:border-box; padding:0 0 0 17px}
-.form-2 .form-row:first-child {padding:0 18px 0 0}
-.form-block {display:table-cell; width:50%; background:#f4f4f4; box-shadow:2px 2px 5px rgba(0, 0, 0, .36); vertical-align:top; padding:19px 30px 26px 30px}
-.form-2 .form-row .form-block {display:block; width:auto; margin:20px 0 0 0}
+.form {padding:45px 60px 21px 60px}
+.form:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.form form {margin:0; padding:0; width:100%}
+.form-row {float:left; width:50%; box-sizing:border-box; padding:0 0 0 27px}
+.form-row:first-child {padding:0 27px 0 0}
+.form-block {margin:20px 0 0 0; background:#f4f4f4; box-shadow:2px 2px 5px rgba(0, 0, 0, .36); vertical-align:top; padding:19px 30px 26px 30px}
 .form-block-title {font-family:"NissanAG Medium Ext", sans-serif; color:#c30c29; min-height:30px; padding:0 0 6px 0}
 .form-radio {margin:9px 0 0 0; display:table; border-collapse:collapse}
 .form-radio div {cursor:pointer; position:relative; padding:0 0 0 30px; display:table-cell; vertical-align:middle; line-height:12px; height:21px}
 .form-radio div span {display:block; position:absolute; left:0; top:0; width:22px; height:21px; background:url(../images/sprite.png); overflow:hidden}
 .form-radio div span.checked {background-position:left -22px}
 .form-radio div span input {position:absolute; left:-99px; top:-99px}
-.form-submit {display:table-cell; width:50%; vertical-align:middle; padding:19px 30px 26px 30px; text-align:center}
+.form-submit {padding:20px 0 0 0; text-align:right}
 .form-submit input {border:none; background:url(../images/sprite.png) -50px top; color:#fff; font:16px/53px "NissanAG Light Ext", sans-serif; width:229px; height:54px; text-align:center; box-sizing:border-box; margin:0; padding:0 28px 0 0; outline:none; cursor:pointer; -webkit-appearance:none}
-.form-hint {display:none; color:#bf1130; padding:13px 0 0 0; margin-bottom:-28px}
-.form-2 .form-row .form-block-phone {background:#fff; padding-top:29px; margin:52px 0 0 0}
-.form-2 .form-hint {text-align:center; padding:0; margin-bottom:-15px}
-.form-phone-content {text-align:center; padding:22px 0 7px 0}
-.form-phone-input {display:inline-block; vertical-align:top; width:216px; height:35px; background:url(../images/sprite.png) left -55px}
-.form-phone-input input {vertical-align:top; width:216px; height:35px; background:none; border:none; margin:0; padding:0; outline:none; text-align:center; font:16px/35px "NissanAG Light Ext", sans-serif; color:#000; -webkit-appearance:none}
-.form-phone-input input::-webkit-input-placeholder {color:#9e9e9e}
-.form-phone-input input::-moz-placeholder {color:#9e9e9e}
-.form-phone-input input:-ms-input-placeholder {color:#9e9e9e}
-.form-phone-submit {display:inline-block; vertical-align:top; padding:0 0 0 16px}
-.form-phone-submit input {vertical-align:top; width:35px; height:35px; border:none; background:url(../images/sprite.png) -253px -55px; margin:0; padding:0; outline:none; text-align:center; font:9px/35px "NissanAG Light Ext", sans-serif; color:#fff; cursor:default; -webkit-appearance:none}
-.form-phone-submit input.active {background-position:-217px -55px; cursor:pointer}
+.form-hint {display:none; color:#bf1130; text-align:center; padding:13px 0 0 0}
 
-.form .form-row .form-block.error,
-.form-2 .form-row .form-block.error {background:#fff5f5}
+.form .form-row .form-block.error {background:#fff5f5}
 
 @media (max-width:1000px) {
-    .form {padding:0; margin:0 -35px; position:relative}
-    .form-2 {padding:0 0 21px 0; margin:0}
+    .form {margin:0; position:relative}
 }
 
 @media (max-width:768px) {
-    .form {margin:0}
-    .form form {display:block}
-    .form-row {display:block}
-    .form-2 .form-row {float:none; width:auto; padding:0}
-    .form-2 .form-row:first-child {padding:0}
+    .form {padding:0; margin:0}
+    .form-row {float:none; width:auto; padding:0}
+    .form-row:first-child {padding:0}
     .form-block {display:block; margin:35px 0 0 0; width:auto}
-    .form-2 .form-row .form-block-phone {padding-top:33px 0 0 0; margin:20px 0 0 0}
     .form-block-title {min-height:34px}
     .form-radio div {padding:0 0 0 37px; line-height:15px; height:25px}
     .form-radio div span {width:26px; height:25px; background-position:-23px top}
     .form-radio div span.checked {background-position:-23px -26px}
-    .form-phone-input {width:261px; height:43px; background-position:left -90px}
-    .form-phone-input input {width:261px; height:43px; font-size:19px; line-height:43px}
-    .form-phone-submit input {font-size:11px; width:42px; height:43px; line-height:47px; background-position:-305px -90px}
-    .form-phone-submit input.active {background-position:-262px -90px}
 }
 
-.translate {font:10px/12px "NissanAG Regular", sans-serif; color:#000; opacity:.5; padding:0 0 18px 0; text-align:justify; position:relative}
+.translate {font:10px/12px "NissanAG Regular", sans-serif; color:#000; opacity:.5; padding:18px 0; text-align:justify; position:relative}
 .translate span {position:absolute; right:100%}
 .last .translate {color:#fff; opacity:1; position:absolute; left:20px; bottom:0}
 
@@ -172,15 +169,10 @@ header {display:table; width:100%; position:relative; z-index:2}
 
 .auto-colors {padding:74px 0 0 0}
 .auto-colors-title {color:#000; font:11px/13px "NissanAG Light", sans-serif}
-.auto-colors-list {padding:12px 0 0 0}
+.auto-colors-list {padding:12px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px}
 .auto-colors-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .auto-colors-list span {box-sizing:border-box; width:16px; height:16px; border-radius:8px; float:left; margin:0 0 0 11px}
 .auto-colors-list span:first-child {margin:0}
-
-.auto-next-title {font:11px/11px "NissanAG Light", sans-serif; padding:54px 0 11px 0; width:172px; color:#000}
-.auto-next-title-mobile {display:none; font:13px/13px "NissanAG Light", sans-serif; color:#000; padding:16px 0 0 0}
-
-.auto-next {display:block; width:151px; height:40px; padding:0 20px 0 0; text-align:center; text-decoration:none; color:#fff; font-size:10px; line-height:40px; background:url(../images/sprite.png) left -135px}
 
 @media (max-width:768px) {
     .auto-inner {float:none; width:auto}
@@ -199,18 +191,16 @@ header {display:table; width:100%; position:relative; z-index:2}
     .auto-text {font-size:15px; line-height:17px; padding:10px 0 0 17px}
     .auto-text ul li:before {top:4px}
 
-    .auto-colors {float:right; text-align:center; padding:54px 0 0 0}
+    .auto-colors {text-align:center; padding:54px 0 0 0}
     .auto-colors-title {font-size:15px; line-height:15px}
-
-    .auto-next-title {display:none}
-    .auto-next-title-mobile {display:block; float:left; width:100%}
-
-    .auto-next {float:left; padding:0 18px 0 0; margin:56px 0 0 0; width:174px; height:45px; font-size:11px; line-height:45px; background-position:left -229px}
+    .auto-colors-list {text-align:center}
+    .auto-colors-list span {display:inline-block; float:none; margin:0 5px}
+    .auto-colors-list span:first-child {margin:0 5px}
 }
 
-.auto-list {margin:0 auto 30px auto; max-width:800px; font-size:0; line-height:0; letter-spacing:-1px}
-.auto-list-row {padding:0 30px}
-.auto-list-row:first-child {border-bottom:1px solid #bfbfbf}
+.auto-list {margin:0 auto 30px auto; max-width:800px; font-size:0; line-height:0; letter-spacing:-1px; position:relative}
+.auto-list-row {padding:0 30px; display:none}
+.auto-list-row:first-child {border-bottom:1px solid #bfbfbf; display:block}
 .auto-list-item {display:inline-block; vertical-align:top; text-align:center; width:25%; padding:17px 0}
 .auto-list a {display:inline-block; vertical-align:top}
 .auto-list a:hover {text-decoration:none}
@@ -221,9 +211,13 @@ header {display:table; width:100%; position:relative; z-index:2}
 .auto-list-photo img:first-child {display:block}
 .auto-list-item.active .auto-list-photo {opacity:.25}
 .auto-list-link {font:9px/12px "NissanAG Light", sans-serif; letter-spacing:0}
+.auto-list .auto-list-prev,
+.auto-list .auto-list-next {position:absolute; top:50%; margin-top:-11px; display:block; width:13px; height:22px; background:url(../images/sprite.png) -172px -135px}
+.auto-list .auto-list-prev {left:0}
+.auto-list .auto-list-next {right:0; background-position:-186px -135px}
 
 @media (max-width:768px) {
-    .auto-list-row {border-top:1px solid #bfbfbf; padding:0}
+    .auto-list-row {border-top:1px solid #bfbfbf; padding:0; display:block}
     .auto-list-row:first-child {border-bottom:none}
     .auto-list-item {width:50%}
     .auto-list-name img {display:inline-block}
@@ -232,4 +226,54 @@ header {display:table; width:100%; position:relative; z-index:2}
     .auto-list-photo img {display:block}
     .auto-list-photo img:first-child {display:none}
     .auto-list-link {font-size:14px; line-height:17px}
+    .auto-list .auto-list-prev,
+    .auto-list .auto-list-next {display:none}
+}
+
+.special {display:table; width:100%; margin:0 auto; max-width:800px}
+.special-text {display:table-cell; vertical-align:middle}
+.special-text-container {background:#ededed; box-shadow:2px 2px 5px rgba(0, 0, 0, .36); padding:10px 8px; color:#000; font-size:11px}
+.special-text-inner {border-top:2px solid #c71545; border-bottom:2px solid #c71545; padding:3px 17px 5px 17px}
+.special-text-inner strong {font-size:12px; color:#c71444; font-weight:normal; font-family:"NissanAG Medium Ext", sans-serif}
+.special-text-inner p {margin:3px 0; padding:0}
+.special-text-inner ul {margin:3px 0; padding:0; list-style:none}
+.special-text-inner li {margin:0; padding:0 0 0 14px; position:relative}
+.special-text-inner li:before {content:""; display:block; width:5px; height:5px; background:#c30c29; border-radius:3px; position:absolute; left:0; top:6px}
+.special-link {display:table-cell; vertical-align:middle; padding:0 0 0 22px; width:171px}
+.auto-next {display:block; width:151px; height:40px; padding:0 20px 0 0; text-align:center; text-decoration:none; color:#fff; font-size:10px; line-height:40px; background:url(../images/sprite.png) left -135px}
+
+@media (max-width:768px) {
+    .special {display:block; padding:0 0 20px 0}
+    .special-text {display:block}
+    .special-link {display:block; text-align:center; width:auto; padding:20px 0 0 0}
+    .auto-next {display:inline-block; padding:0 18px 0 0; width:174px; height:45px; font-size:11px; line-height:45px; background-position:left -229px}
+}
+
+.special-form {max-width:800px; margin:0 auto; padding:44px 0 0 0}
+.special-form-title {font-family:"NissanAG Medium Ext", sans-serif; color:#000}
+.special-form form {margin:-10px 0 0 0; padding:0}
+.special-form-block {margin:30px 0 0 0; background:#f4f4f4; box-shadow:2px 2px 5px rgba(0, 0, 0, .36); vertical-align:top; padding:24px 20px}
+.special-form-block.error {background:#fff5f5}
+.special-form-block-inner {display:table; width:100%}
+.special-form-label {display:table-cell; vertical-align:middle; width:190px; color:#c30c29; font:13px/15px "NissanAG Medium Ext", sans-serif}
+.special-form-label-phone {width:400px}
+.special-form-field {display:table-cell; vertical-align:middle}
+.special-form-select {width:100%; position:relative}
+.special-form-select select {width:100%; height:34px; font:16px/34px "NissanAG Medium Ext", sans-serif; color:#4e4e56}
+.special-form-input {width:100%; position:relative}
+.special-form-input input {vertical-align:top; width:100%; height:34px; box-sizing:border-box; margin:0; padding:0 33px; outline:none; border:none; background:#fff; border-radius:10px/6px; color:#4e4e56; font:16px/34px "NissanAG Light Ext", sans-serif; box-shadow:inset 2px 2px 0 #c3c3c3}
+.special-form-hint {display:none; text-align:right; color:#bf1130; padding:15px 0 0 0}
+.special-form-submit {text-align:right; padding:35px 0 0 0}
+.special-form-submit input {border:none; background:url(../images/sprite.png) -50px top; color:#fff; font:16px/53px "NissanAG Light Ext", sans-serif; width:229px; height:54px; text-align:center; box-sizing:border-box; margin:0; padding:0 28px 0 0; outline:none; cursor:pointer; -webkit-appearance:none}
+
+@media (max-width:768px) {
+    .special-form {padding:34px 0 0 0}
+    .special-form-title {font-size:13px}
+    .special-form-block {padding:0 35px 30px 35px}
+    .special-form-block-inner {display:block}
+    .special-form-label {width:auto; display:block; font-size:16px; line-height:19px; padding:24px 0 20px 0}
+    .special-form-label-phone {width:auto}
+    .special-form-field {display:block}
+    .special-form-submit {text-align:center; padding:20px 0 0 0}
+    .special-form-hint {text-align:center}
 }

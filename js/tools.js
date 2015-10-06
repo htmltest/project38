@@ -44,6 +44,43 @@
             }
         });
 
+        $('#city').change(function() {
+            switch ($(this).val()) {
+                case '':
+                    $('#dealer').html('<option value="">-</option>');
+                    break;
+                case '1':
+                    $('#dealer').html('<option value="">-</option><option value="1">Московский дилер 1</option><option value="2">Московский дилер 2</option><option value="3">Московский дилер 3</option>');
+                    break;
+                case '2':
+                    $('#dealer').html('<option value="">-</option><option value="1">Петербургский дилер 1</option><option value="2">Петербургский дилер 2</option><option value="3">Петербургский дилер 3</option>');
+                    break;
+            }
+            $('#dealer').trigger('chosen:updated');
+        });
+
+        $('select').chosen({disable_search: true});
+
+        $('.special-form form').submit(function(e) {
+            var fieldsValid = true;
+            $('.special-form-block').each(function() {
+                $(this).removeClass('error');
+                if ($(this).find('select').length > 0 && ($(this).find('select').val() == '' || $(this).find('select').val() == '-')) {
+                    fieldsValid = false;
+                    $(this).addClass('error');
+                    $('.special-form-hint').show();
+                }
+                if ($(this).find('input[name="phone"]').length > 0 && $(this).find('input[name="phone"]').val() == '') {
+                    fieldsValid = false;
+                    $(this).addClass('error');
+                    $('.special-form-hint').show();
+                }
+            });
+            if (!fieldsValid) {
+                e.preventDefault();
+            }
+        });
+
         $('.auto-slider').each(function() {
             var curSlider = $(this);
             curSlider.data('curIndex', 0);
