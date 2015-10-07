@@ -198,9 +198,9 @@ header {display:table; width:100%; position:relative; z-index:2}
     .auto-colors-list span:first-child {margin:0 5px}
 }
 
-.auto-list {margin:0 auto 30px auto; max-width:800px; font-size:0; line-height:0; letter-spacing:-1px; position:relative}
+.auto-list {margin:0 auto 30px auto; max-width:800px; font-size:0; line-height:0; letter-spacing:-1px; border-bottom:1px solid #bfbfbf; position:relative}
 .auto-list-row {padding:0 30px; display:none}
-.auto-list-row:first-child {border-bottom:1px solid #bfbfbf; display:block}
+.auto-list-row:first-child {display:block}
 .auto-list-item {display:inline-block; vertical-align:top; text-align:center; width:25%; padding:17px 0}
 .auto-list a {display:inline-block; vertical-align:top}
 .auto-list a:hover {text-decoration:none}
@@ -217,8 +217,8 @@ header {display:table; width:100%; position:relative; z-index:2}
 .auto-list .auto-list-next {right:0; background-position:-186px -135px}
 
 @media (max-width:768px) {
-    .auto-list-row {border-top:1px solid #bfbfbf; padding:0; display:block}
-    .auto-list-row:first-child {border-bottom:none}
+    .auto-list {border-bottom:none}
+    .auto-list-row {border-top:1px solid #bfbfbf; padding:0; display:block !important}
     .auto-list-item {width:50%}
     .auto-list-name img {display:inline-block}
     .auto-list-name img:first-child {display:none}

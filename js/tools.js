@@ -145,6 +145,45 @@
             e.preventDefault();
         });
 
+        $('.auto-list').each(function() {
+            var curSlider = $(this);
+            curSlider.data('curIndex', 0)
+        });
+
+        $('.auto-list-next').click(function(e) {
+            var curSlider = $(this).parents().filter('.auto-list');
+
+            var curIndex = curSlider.data('curIndex');
+            curIndex++;
+            if (curIndex > curSlider.find('.auto-list-row').length - 1) {
+                curIndex = 0;
+            }
+            curSlider.data('curIndex', curIndex)
+            $('.auto-list-row').stop(true, true);
+            $('.auto-list-row:visible').fadeOut(function() {
+                $('.auto-list-row').eq(curIndex).fadeIn();
+            });
+
+            e.preventDefault();
+        });
+
+        $('.auto-list-prev').click(function(e) {
+            var curSlider = $(this).parents().filter('.auto-list');
+
+            var curIndex = curSlider.data('curIndex');
+            curIndex--;
+            if (curIndex < 0) {
+                curIndex = curSlider.find('.auto-list-row').length - 1;
+            }
+            curSlider.data('curIndex', curIndex)
+            $('.auto-list-row').stop(true, true);
+            $('.auto-list-row:visible').fadeOut(function() {
+                $('.auto-list-row').eq(curIndex).fadeIn();
+            });
+
+            e.preventDefault();
+        });
+
     });
 
     $(window).bind('load resize', function() {
@@ -157,6 +196,16 @@
                 }
             });
             $(this).find('li').css({'height': curHeight, 'line-height': curHeight + 'px'});
+        });
+        $('.auto-list').each(function() {
+            $(this).find('.auto-list-item a').css({'height': 'auto'});
+            var curHeight = 0;
+            $(this).find('.auto-list-item a').each(function() {
+                if ($(this).height() > curHeight) {
+                    curHeight = $(this).height();
+                }
+            });
+            $(this).find('.auto-list-item a').css({'height': curHeight});
         });
     });
 
