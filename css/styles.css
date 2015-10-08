@@ -136,9 +136,11 @@ header {display:table; width:100%; position:relative; z-index:2}
 .last-text-inner {display:inline-block; vertical-align:top; text-align:left}
 .last-text-title {font:42px/42px "NissanAG Medium Ext", sans-serif; color:#000}
 .last-text-descr {font:14px/17px "NissanAG Light", sans-serif; color:#000; padding:8px 0 0 0}
+.last-btn {display:block; width:151px; height:40px; padding:0 20px 0 0; text-align:center; text-decoration:none; color:#fff; font-size:16px; line-height:40px; background:url(../images/sprite.png) left -135px}
 
 @media (max-width:768px) {
     .last-text {padding:37px 0 0 0; text-align:left}
+    .last-btn {padding:0 14px 0 0; width:222px; height:52px; font-size:20px; line-height:52px; background-position:left -176px}
 }
 
 .auto {margin:20px auto 30px auto; max-width:1024px; position:relative}
