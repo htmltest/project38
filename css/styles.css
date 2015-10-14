@@ -93,8 +93,8 @@ header {display:table; width:100%; position:relative; z-index:2}
     .form-radio div span.checked {background-position:-23px -26px}
 }
 
-.translate {font:10px/12px "NissanAG Regular", sans-serif; color:#000; opacity:.5; padding:18px 0; text-align:justify; position:relative}
-.translate span {position:absolute; right:100%}
+.translate {font:11px/13px "NissanAG Regular", sans-serif; color:#000; opacity:.5; padding:18px 0 18px 10px; text-align:justify; position:relative}
+.translate span {display:inline-block; vertical-align:top; width:10px; margin-left:-13px; padding:0 3px 0 0; font-size:8px; text-align:right; line-height:10px}
 .last .translate {color:#fff; opacity:1; position:absolute; left:20px; bottom:0}
 
 .profile {width:40%; margin:0 auto; position:relative}
