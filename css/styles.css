@@ -171,10 +171,9 @@ header {display:table; width:100%; position:relative; z-index:2}
 
 .auto-colors {padding:74px 0 0 0}
 .auto-colors-title {color:#000; font:11px/13px "NissanAG Light", sans-serif}
-.auto-colors-list {padding:12px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px}
+.auto-colors-list {padding:1px 0 0 0; font-size:0; line-height:0; letter-spacing:-1px; margin:0 0 0 -11px}
 .auto-colors-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
-.auto-colors-list span {box-sizing:border-box; width:16px; height:16px; border-radius:8px; float:left; margin:0 0 0 11px}
-.auto-colors-list span:first-child {margin:0}
+.auto-colors-list span {box-sizing:border-box; width:16px; height:16px; border-radius:8px; float:left; margin:11px 0 0 11px}
 
 @media (max-width:768px) {
     .auto-inner {float:none; width:auto}
