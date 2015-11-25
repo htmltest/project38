@@ -65,11 +65,6 @@
             var fieldsValid = true;
             $('.special-form-block').each(function() {
                 $(this).removeClass('error');
-                if ($(this).find('select').length > 0 && ($(this).find('select').val() == '' || $(this).find('select').val() == '-')) {
-                    fieldsValid = false;
-                    $(this).addClass('error');
-                    $('.special-form-hint').show();
-                }
                 if ($(this).find('input[name="phone"]').length > 0 && $(this).find('input[name="phone"]').val() == '') {
                     fieldsValid = false;
                     $(this).addClass('error');
@@ -145,6 +140,29 @@
             e.preventDefault();
         });
 
+        $('.auto-colors-list a').click(function(e) {
+            var curIndex = $('.auto-colors-list a').index($(this));
+            $('.auto-slider-ctrl-inner a:first').click();
+            if ($(this).hasClass('views')) {
+                $('.auto-slider-ctrl').css({'visibility': 'visible'});
+            } else {
+                $('.auto-slider-ctrl').css({'visibility': 'hidden'});
+            }
+            $('.auto-slider li').each(function() {
+                if ($(this).find('img').eq(curIndex).length == 1) {
+                    $(this).find('img').css({'position': 'absolute', 'left': -9999, 'top': -9999});
+                    $(this).find('img').eq(curIndex).css({'position': 'relative', 'left': 'auto', 'top': 'auto'});
+                } else {
+                    $(this).find('img').css({'position': 'relative', 'left': 'auto', 'top': 'auto'});
+                }
+            });
+            $('.auto-colors-list a').removeClass('active');
+            $(this).addClass('active');
+            e.preventDefault();
+        });
+
+        $('.auto-colors-list a.active').click();
+
         $('.auto-list').each(function() {
             var curSlider = $(this);
             curSlider.data('curIndex', 0)
@@ -187,16 +205,6 @@
     });
 
     $(window).bind('load resize', function() {
-        $('.auto-slider').each(function() {
-            $(this).find('li').css({'height': 'auto', 'line-height': 'normal'});
-            var curHeight = 0;
-            $(this).find('li').each(function() {
-                if ($(this).height() > curHeight) {
-                    curHeight = $(this).height();
-                }
-            });
-            $(this).find('li').css({'height': curHeight, 'line-height': curHeight + 'px'});
-        });
         $('.auto-list').each(function() {
             $(this).find('.auto-list-item a').css({'height': 'auto'});
             var curHeight = 0;
