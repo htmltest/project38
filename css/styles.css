@@ -215,8 +215,7 @@ header {display:table; width:100%; position:relative; z-index:2}
 .auto-list .auto-list-next {right:0; background-position:-186px -135px}
 
 @media (max-width:768px) {
-    .auto-list {border-bottom:none}
-    .auto-list-row {border-top:1px solid #bfbfbf; padding:0; display:block !important}
+    .auto-list {border-top:1px solid #bfbfbf}
     .auto-list-item {width:50%}
     .auto-list-name img {display:inline-block}
     .auto-list-name img:first-child {display:none}
@@ -224,8 +223,6 @@ header {display:table; width:100%; position:relative; z-index:2}
     .auto-list-photo img {display:block}
     .auto-list-photo img:first-child {display:none}
     .auto-list-link {font-size:14px; line-height:17px}
-    .auto-list .auto-list-prev,
-    .auto-list .auto-list-next {display:none}
 }
 
 .special-form {max-width:800px; margin:0 auto}
