@@ -230,22 +230,22 @@ header {display:table; width:100%; position:relative; z-index:2}
 
 .special-form {max-width:800px; margin:0 auto}
 .special-form form {margin:0; padding:0}
-.special-form-title {font-family:"NissanAG Medium Ext", sans-serif; color:#bf1130; padding:0 0 10px 0}
-.special-form-block {background:#f4f4f4; box-shadow:2px 2px 5px rgba(0, 0, 0, .36); vertical-align:top; padding:14px 20px 24px 20px}
+.special-form-title {font-family:"NissanAG Medium Ext", sans-serif; color:#bf1130; padding:0 10px 0 0; display:table-cell; vertical-align:middle; width:33.33%}
+.special-form-block {background:#f4f4f4; box-shadow:2px 2px 5px rgba(0, 0, 0, .36); vertical-align:top; padding:14px 20px 24px 20px; position:relative}
 .special-form-block.error {background:#fff5f5}
 .special-form-block-inner {display:table; width:100%}
-.special-form-input {float:right; width:50%; position:relative}
+.special-form-input {display:table-cell; vertical-align:middle; width:33.33%; padding:0 10px 0 0; position:relative}
 .special-form-input input {vertical-align:top; width:100%; height:34px; box-sizing:border-box; margin:0; padding:0 33px; outline:none; border:none; background:#fff; border-radius:10px/6px; color:#4e4e56; font:16px/34px "NissanAG Light Ext", sans-serif; box-shadow:inset 2px 2px 0 #c3c3c3}
-.special-form-hint {display:none; text-align:right; color:#bf1130; padding:15px 0 0 0}
-.special-form-submit {text-align:right; padding:15px 0 0 0}
+.special-form-hint {display:none; position:absolute; right:20px; bottom:10px; color:#bf1130}
+.special-form-submit {display:table-cell; width:1%; text-align:right; vertical-align:middle}
 .special-form-submit input {border:none; background:url(../images/sprite.png) left -135px; color:#fff; font:10px/40px "NissanAG Light Ext", sans-serif; width:171px; height:40px; text-align:center; box-sizing:border-box; margin:0; padding:0 20px 0 0; outline:none; cursor:pointer; -webkit-appearance:none}
 
 @media (max-width:768px) {
     .special-form {padding:34px 0 0 0}
-    .special-form-title {font-size:13px}
+    .special-form-title {font-size:13px; display:block; width:auto; padding:0 0 10px 0}
     .special-form-block {padding:14px 35px 30px 35px}
     .special-form-block-inner {display:block}
-    .special-form-submit {text-align:center; padding:20px 0 0 0}
-    .special-form-hint {text-align:center}
-    .special-form-input {float:none; width:100%; padding:10px 0 0 0}
+    .special-form-submit {text-align:center; padding:20px 0 0 0; display:block; width:auto; padding:10px 0 0 0}
+    .special-form-hint {text-align:center; position:relative; right:auto; bottom:auto; padding:10px 0 0 0}
+    .special-form-input {float:none; width:100%; padding:10px 0 0 0; display:block; width:auto}
 }
