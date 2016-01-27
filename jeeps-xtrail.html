@@ -206,6 +206,50 @@
             </div>
             <!-- special form END -->
 
+            <script src="js/doanimate.js"></script>
+            <a href="https://www.infiniti.ru/vehicles/new-vehicles/qx70.html" target="_blank">
+                <div id="main">
+                    <div id="bg">
+                        <div id="cntr1"></div>
+                       <div id="cntr2"></div>
+                        <div id="cntr3"></div>
+                        <div id="cntr4"></div>
+                        <div id="logo"></div>
+                        <div id="text1"></div>
+                        <div id="text2"></div>
+                    </div>
+                </div>
+            </a>
+            <script>
+                window.onload=function(){
+
+                    init()
+                    bg.style.display="block";
+                }
+
+                function init(){
+                    Do(bg,{alpha:0},0,0);
+                    Do(cntr1,{alpha:1, scale:0.65},0,0); cntr1.style.visibility="hidden"
+                    Do(cntr2,{alpha:1, scale:0.65},0,0); cntr2.style.visibility="hidden"
+                    Do(cntr3,{alpha:1, scale:0.65},0,0); cntr3.style.visibility="hidden"
+                    Do(cntr4,{alpha:1, scale:0.65},0,0); cntr4.style.visibility="hidden"
+                    Do(text1,{alpha:0},0,0);
+                    Do(text2,{alpha:0},0,0);
+                    start();
+                }
+
+                function start(){
+                    Do(bg,{alpha:1},0.5,0.5);
+                    Do(cntr1,{alpha:0, scale:1.30, visible:"visible", ease:"easeInOut"},1,1);
+                    Do(cntr2,{alpha:0, scale:1.30, visible:"visible", ease:"easeInOut"},1,1.5);
+                    Do(cntr3,{alpha:0, scale:1.30, visible:"visible", ease:"easeInOut"},1,2);
+                    Do(cntr4,{alpha:0, scale:1.30, visible:"visible", ease:"easeInOut"},1,2.5);
+                    Do(text1,{alpha:1},0.5,3); Do(text1,{alpha:0},0.5,4.5);
+                    Do(text2,{alpha:1},0.5,5);
+                    Do(bg,{alpha:0, complete:init},0.8,7);
+                }
+            </script>
+
             <div class="translate">
                 <span>*</span>Инновации, которые восхищают.<br />
                 Перечисленные опции доступны не во всех комплектациях.<br />

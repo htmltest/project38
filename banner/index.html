@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Banner</title>
+<script src="doanimate.js"></script>
+<style>
+#main{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:781px;
+	height:140px;
+	background-color:#000000;
+	border:1px solid #666666;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	overflow:hidden;
+    cursor:pointer;
+}
+#bg{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:781px;
+	height:140px;
+	background-image:url(bg.jpg);
+	display:none;
+}
+#logo{
+	position:absolute;
+	top:10px;
+	right:12px;
+	width:126px;
+	height:18px;
+	background-image:url(logo.png);
+}
+#text1{
+	position:absolute;
+	top:8px;
+	left:10px;
+	width:472px;
+	height:32px;
+	background-image:url(text1.png);
+}
+#text2{
+	position:absolute;
+	top:12px;
+	left:10px;
+	width:510px;
+	height:19px;
+	background-image:url(text2.png);
+}
+#cntr1{position:absolute; top:25px; left:75px; width:252px; height:129px; background-image:url(bord1.png); visibility:hidden;}
+#cntr2{position:absolute; top:23px; left:185px; width:268px; height:126px; background-image:url(bord2.png); visibility:hidden;}
+#cntr3{position:absolute; top:27px; left:320px; width:279px; height:126px; background-image:url(bord3.png); visibility:hidden;}
+#cntr4{position:absolute; top:15px; left:422px; width:289px; height:130px; background-image:url(bord4.png); visibility:hidden;}
+
+</style>
+</head>
+<body>
+<div id="main">
+	<div id="bg">
+    	<div id="cntr1"></div>
+       <div id="cntr2"></div>
+        <div id="cntr3"></div>
+        <div id="cntr4"></div>
+        <div id="logo"></div>
+        <div id="text1"></div>
+        <div id="text2"></div>
+    </div>
+</div>
+<script>
+window.onload=function(){
+
+	init()
+	bg.style.display="block";
+}
+
+function init(){
+	Do(bg,{alpha:0},0,0);
+	Do(cntr1,{alpha:1, scale:0.65},0,0); cntr1.style.visibility="hidden"
+	Do(cntr2,{alpha:1, scale:0.65},0,0); cntr2.style.visibility="hidden"
+	Do(cntr3,{alpha:1, scale:0.65},0,0); cntr3.style.visibility="hidden"
+	Do(cntr4,{alpha:1, scale:0.65},0,0); cntr4.style.visibility="hidden"
+	Do(text1,{alpha:0},0,0);
+	Do(text2,{alpha:0},0,0);
+	start();
+}
+
+function start(){
+	Do(bg,{alpha:1},0.5,0.5);
+	Do(cntr1,{alpha:0, scale:1.30, visible:"visible", ease:"easeInOut"},1,1);
+	Do(cntr2,{alpha:0, scale:1.30, visible:"visible", ease:"easeInOut"},1,1.5);
+	Do(cntr3,{alpha:0, scale:1.30, visible:"visible", ease:"easeInOut"},1,2);
+	Do(cntr4,{alpha:0, scale:1.30, visible:"visible", ease:"easeInOut"},1,2.5);
+	Do(text1,{alpha:1},0.5,3); Do(text1,{alpha:0},0.5,4.5);
+	Do(text2,{alpha:1},0.5,5);
+	Do(bg,{alpha:0, complete:init},0.8,7);
+}
+</script>
+</body>
+</html>
