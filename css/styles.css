@@ -253,7 +253,6 @@ header {display:table; width:100%; position:relative; z-index:2}
     margin:15px auto;
 	width:100%;
     max-width:800px;
-	height:140px;
 	background-color:#000000;
 	border:1px solid #666666;
 	-webkit-box-sizing:border-box;
@@ -261,14 +260,11 @@ header {display:table; width:100%; position:relative; z-index:2}
 	box-sizing:border-box;
 	overflow:hidden;
     cursor:pointer;
+    line-height:0;
 }
 #bg{
-	position:absolute;
-	top:0px;
-	left:0px;
+	position:relative;
 	width:100%;
-	height:100%;
-	background:url(../images/banner/bg.jpg) no-repeat center;
     background-size:cover;
 	display:none;
 }
@@ -290,7 +286,7 @@ header {display:table; width:100%; position:relative; z-index:2}
 	left:10px;
 	width:65%;
 }
-#cntr1{position:absolute; top:25px; left:50%; margin-left:-319px; width:252px; visibility:hidden;}
-#cntr2{position:absolute; top:23px; left:50%; margin-left:-205px; width:268px; visibility:hidden;}
-#cntr3{position:absolute; top:27px; left:50%; margin-left:-70px; width:279px; visibility:hidden;}
-#cntr4{position:absolute; top:15px; left:50%; margin-left:32px; width:289px; visibility:hidden;}
+#cntr1{position:absolute; top:17.86%; left:9.6%; width:32.26%; visibility:hidden;}
+#cntr2{position:absolute; top:16.43%; left:23.69%; width:34.31%; visibility:hidden;}
+#cntr3{position:absolute; top:19.29%; left:40.97%; width:35.72%; visibility:hidden;}
+#cntr4{position:absolute; top:10.71%; left:54.03%; width:37%; visibility:hidden;}
